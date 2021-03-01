@@ -15,10 +15,11 @@ class MyApp extends StatelessWidget {
           child: Container(
             height: 400,
             width: 400,
-            child: Lottie.asset("assets/lottie/cat.json"),
+            child: Image.asset("icons/quiz.png"),
           ),
         ),
         nextScreen: screentoshow(),
+        splashTransition: SplashTransition.rotationTransition,
       ),
     );
   }
@@ -33,8 +34,13 @@ class _screentoshowState extends State<screentoshow> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [Text("Welcome")],
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text("welcome"),
+          )
+        ],
       ),
     );
   }
