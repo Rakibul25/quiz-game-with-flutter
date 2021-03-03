@@ -1,8 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
-//import 'package:lottie/lottie.dart';
-import 'package:quizapp/Screens/home.dart';
+import 'package:quizapp/Screens/home/home.dart';
+import 'package:quizapp/Screens/splashscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,10 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: AnimatedSplashScreen(
-        splash: Container(
-          height: 400,
-          width: 400,
-          child: Lottie.asset('assets/lottie/cat.json'),
+        splash: Scaffold(
+          body: splashscreen(),
         ),
         nextScreen: screentoshow(),
         splashTransition: SplashTransition.rotationTransition,
@@ -42,7 +39,7 @@ class _screentoshowState extends State<screentoshow> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: Text('Hello'),
+            child: home(),
           )
         ],
       ),
