@@ -8,13 +8,13 @@ class home extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            child: menu("Java"),
+            child: menu("assets/icons/java.png"),
           ),
           SizedBox(
             width: 15,
           ),
           Container(
-            child: menu("JavaScript"),
+            child: menu("assets/icons/javascript.png"),
           )
         ],
       ),
@@ -22,12 +22,19 @@ class home extends StatelessWidget {
   }
 }
 
-Widget menu(String a) {
+Widget menu(String b) {
   return Container(
-    height: 150,
-    width: 150,
-    child: Center(
-      child: Text('$a'),
+    height: 120,
+    width: 120,
+    child: Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Center(
+        child: Column(
+          children: [
+            Image.asset('$b'),
+          ],
+        ),
+      ),
     ),
     decoration: BoxDecoration(
       color: const Color(0xff7c94b6),
